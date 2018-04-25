@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		820382772090B3F400F04066 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 820382762090B3F400F04066 /* AppDelegate.m */; };
-		8203827A2090B3F400F04066 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 820382792090B3F400F04066 /* ViewController.m */; };
 		8203827D2090B3F400F04066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8203827B2090B3F400F04066 /* Main.storyboard */; };
 		8203827F2090B3F400F04066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8203827E2090B3F400F04066 /* Assets.xcassets */; };
 		820382822090B3F400F04066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820382802090B3F400F04066 /* LaunchScreen.storyboard */; };
 		820382852090B3F400F04066 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 820382842090B3F400F04066 /* main.m */; };
+		820382902090B75C00F04066 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8203828D2090B75C00F04066 /* AppDelegate.m */; };
+		820382912090B75C00F04066 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8203828F2090B75C00F04066 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		820382722090B3F400F04066 /* Filtrado glomerular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filtrado glomerular.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		820382752090B3F400F04066 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		820382762090B3F400F04066 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		820382782090B3F400F04066 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		820382792090B3F400F04066 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8203827C2090B3F400F04066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8203827E2090B3F400F04066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		820382812090B3F400F04066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		820382832090B3F400F04066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		820382842090B3F400F04066 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8203828C2090B75C00F04066 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8203828D2090B75C00F04066 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8203828E2090B75C00F04066 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8203828F2090B75C00F04066 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +58,33 @@
 		820382742090B3F400F04066 /* Filtrado glomerular */ = {
 			isa = PBXGroup;
 			children = (
-				820382752090B3F400F04066 /* AppDelegate.h */,
-				820382762090B3F400F04066 /* AppDelegate.m */,
-				820382782090B3F400F04066 /* ViewController.h */,
-				820382792090B3F400F04066 /* ViewController.m */,
-				8203827B2090B3F400F04066 /* Main.storyboard */,
-				8203827E2090B3F400F04066 /* Assets.xcassets */,
-				820382802090B3F400F04066 /* LaunchScreen.storyboard */,
+				820382922090B76700F04066 /* Vista */,
+				8203828B2090B75C00F04066 /* Controlador */,
 				820382832090B3F400F04066 /* Info.plist */,
 				820382842090B3F400F04066 /* main.m */,
 			);
 			path = "Filtrado glomerular";
+			sourceTree = "<group>";
+		};
+		8203828B2090B75C00F04066 /* Controlador */ = {
+			isa = PBXGroup;
+			children = (
+				8203828C2090B75C00F04066 /* AppDelegate.h */,
+				8203828D2090B75C00F04066 /* AppDelegate.m */,
+				8203828E2090B75C00F04066 /* ViewController.h */,
+				8203828F2090B75C00F04066 /* ViewController.m */,
+			);
+			path = Controlador;
+			sourceTree = "<group>";
+		};
+		820382922090B76700F04066 /* Vista */ = {
+			isa = PBXGroup;
+			children = (
+				8203827B2090B3F400F04066 /* Main.storyboard */,
+				8203827E2090B3F400F04066 /* Assets.xcassets */,
+				820382802090B3F400F04066 /* LaunchScreen.storyboard */,
+			);
+			path = Vista;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8203827A2090B3F400F04066 /* ViewController.m in Sources */,
+				820382912090B75C00F04066 /* ViewController.m in Sources */,
+				820382902090B75C00F04066 /* AppDelegate.m in Sources */,
 				820382852090B3F400F04066 /* main.m in Sources */,
-				820382772090B3F400F04066 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
