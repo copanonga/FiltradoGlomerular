@@ -22,13 +22,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPeso;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCreatinina;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerEdad;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerPeso;
 
 @end
 
 @implementation ViewController
 @synthesize tablaEdad, tablaPeso;
 @synthesize textFieldEdad, textFieldPeso, textFieldCreatinina;
-@synthesize pickerEdad;
+@synthesize pickerEdad, pickerPeso;
 
 - (void)viewDidLoad {
     
@@ -165,7 +166,7 @@
     
 }
 
-#pragma mark - Picker edad
+#pragma mark - Picker edad y peso
 
 - (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -174,13 +175,29 @@
 
 - (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return (int)[listadoEdad count];
+    if ([pickerView isEqual:pickerEdad])
+        return (int)[listadoEdad count];
+    
+    if ([pickerView isEqual:pickerPeso])
+        return (int)[listadoPeso count];
+    
+    return 0;
 }
 
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    NSString *dato = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:row] intValue]];
-    return dato;
+    if ([pickerView isEqual:pickerEdad]) {
+        NSString *dato = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:row] intValue]];
+        return dato;
+    }
+    
+    if ([pickerView isEqual:pickerPeso]) {
+        NSString *dato = [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:row] floatValue]];
+        return dato;
+    }
+        
+    return @"";
+    
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -189,6 +206,11 @@
     if ([pickerView isEqual:pickerEdad]) {
         NSString *dato = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:row] intValue]];
         textFieldEdad.text = dato;
+    }
+    
+    if ([pickerView isEqual:pickerPeso]) {
+        NSString *dato = [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:row] floatValue]];
+        textFieldPeso.text = dato;
     }
 
 }
