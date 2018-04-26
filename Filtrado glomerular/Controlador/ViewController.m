@@ -15,13 +15,18 @@
 
 }
 
-@property (weak, nonatomic) IBOutlet UITableView *tablaPeso;
 @property (weak, nonatomic) IBOutlet UITableView *tablaEdad;
+@property (weak, nonatomic) IBOutlet UITableView *tablaPeso;
+
+@property (weak, nonatomic) IBOutlet UITextField *textFieldEdad;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldPeso;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldCreatinina;
 
 @end
 
 @implementation ViewController
 @synthesize tablaEdad, tablaPeso;
+@synthesize textFieldEdad, textFieldPeso, textFieldCreatinina;
 
 - (void)viewDidLoad {
     
@@ -112,6 +117,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    if ([tableView isEqual:tablaEdad]) {
+        NSString *dato = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:indexPath.row] intValue]];
+        textFieldEdad.text = dato;
+    }
+    
+    if ([tableView isEqual:tablaPeso]) {
+        NSString *dato = [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:indexPath.row] floatValue]];
+        textFieldPeso.text = dato;
+    }
     
 }
 
