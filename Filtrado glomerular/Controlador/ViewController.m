@@ -21,12 +21,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFieldEdad;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPeso;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCreatinina;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerEdad;
 
 @end
 
 @implementation ViewController
 @synthesize tablaEdad, tablaPeso;
 @synthesize textFieldEdad, textFieldPeso, textFieldCreatinina;
+@synthesize pickerEdad;
 
 - (void)viewDidLoad {
     
@@ -161,6 +163,34 @@
     
     return cell;
     
+}
+
+#pragma mark - Picker edad
+
+- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return (int)[listadoEdad count];
+}
+
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *dato = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:row] intValue]];
+    return dato;
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    
+    if ([pickerView isEqual:pickerEdad]) {
+        NSString *dato = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:row] intValue]];
+        textFieldEdad.text = dato;
+    }
+
 }
 
 @end
