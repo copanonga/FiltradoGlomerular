@@ -28,6 +28,12 @@
 @synthesize textFieldEdad, textFieldPeso, textFieldCreatinina;
 @synthesize pickerEdad, pickerPeso;
 
+int const EDAD_MAXIMA = 121;
+int const PESO_MAXIMO = 151;
+
+int const EDAD_INICIAL = 29;
+float const PESO_INICIAL = 690;
+
 - (void)viewDidLoad {
     
     NSLog(@"\nViewController");
@@ -58,8 +64,11 @@
     
     listadoEdad = [[NSMutableArray alloc] init];
     
-    for (int i = 1 ; i < 120 ; i++)
+    for (int i = 1 ; i < EDAD_MAXIMA ; i++)
         [listadoEdad addObject:[NSNumber numberWithInt:i]];
+    
+    [pickerEdad selectRow:EDAD_INICIAL inComponent:0 animated:YES];
+    textFieldEdad.text = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:EDAD_INICIAL] intValue]];
     
 }
 
@@ -67,9 +76,11 @@
     
     listadoPeso = [[NSMutableArray alloc] init];
     
-    for (float i = 1 ; i < 10 ; i = i + 0.1){
+    for (float i = 1 ; i < PESO_MAXIMO ; i = i + 0.1)
         [listadoPeso addObject:[NSNumber numberWithFloat:i]];
-    }
+    
+    [pickerPeso selectRow:PESO_INICIAL inComponent:0 animated:YES];
+    textFieldPeso.text = [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:PESO_INICIAL] floatValue]];
     
 }
 
@@ -93,15 +104,11 @@
 
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    if ([pickerView isEqual:pickerEdad]) {
-        NSString *dato = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:row] intValue]];
-        return dato;
-    }
+    if ([pickerView isEqual:pickerEdad])
+        return [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:row] intValue]];
     
-    if ([pickerView isEqual:pickerPeso]) {
-        NSString *dato = [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:row] floatValue]];
-        return dato;
-    }
+    if ([pickerView isEqual:pickerPeso])
+        return [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:row] floatValue]];
         
     return @"";
     
@@ -110,15 +117,11 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     
-    if ([pickerView isEqual:pickerEdad]) {
-        NSString *dato = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:row] intValue]];
-        textFieldEdad.text = dato;
-    }
+    if ([pickerView isEqual:pickerEdad])
+        textFieldEdad.text = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:row] intValue]];
     
-    if ([pickerView isEqual:pickerPeso]) {
-        NSString *dato = [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:row] floatValue]];
-        textFieldPeso.text = dato;
-    }
+    if ([pickerView isEqual:pickerPeso])
+        textFieldPeso.text = [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:row] floatValue]];
 
 }
 
