@@ -21,12 +21,14 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerEdad;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerPeso;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentGenero;
 
 @end
 
 @implementation ViewController
 @synthesize textFieldEdad, textFieldPeso, textFieldCreatinina;
 @synthesize pickerEdad, pickerPeso;
+@synthesize segmentGenero;
 
 int const EDAD_MAXIMA = 121;
 int const PESO_MAXIMO = 151;
@@ -123,6 +125,20 @@ float const PESO_INICIAL = 690;
     if ([pickerView isEqual:pickerPeso])
         textFieldPeso.text = [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:row] floatValue]];
 
+}
+
+#pragma mark - Seleccionar género
+
+- (IBAction)pulsarSegmentGenero:(id)sender {
+
+    if (segmentGenero.selectedSegmentIndex == 0) {
+        NSLog(@"Hombre");
+    }
+    
+    if(segmentGenero.selectedSegmentIndex == 1) {
+        NSLog(@"Mujer");
+    }
+    
 }
 
 @end
