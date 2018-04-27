@@ -12,6 +12,11 @@
 
     NSMutableArray *listadoEdad;
     NSMutableArray *listadoPeso;
+    
+    int edadSeleccionada;
+    float pesoSeleccionado;
+    float creatininaSeleccionada;
+    BOOL generoSeleccionado;
 
 }
 
@@ -54,10 +59,30 @@ float const PESO_INICIAL = 690;
     listadoEdad = [[NSMutableArray alloc] init];
     listadoPeso = [[NSMutableArray alloc] init];
     
+    edadSeleccionada = EDAD_INICIAL;
+    pesoSeleccionado = PESO_INICIAL;
+    creatininaSeleccionada = 0;
+    generoSeleccionado = 0;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Calcular Cockcroft-Gault
+
+-(void)calculoCockcroftGault {
+    
+    NSLog(@"Edad: %i", edadSeleccionada);
+    NSLog(@"Peso: %.01f", pesoSeleccionado);
+    NSLog(@"Creatinina: %.03f", creatininaSeleccionada);
+    
+    if (generoSeleccionado)
+        NSLog(@"Género: mujer");
+    else
+        NSLog(@"Género: hombre");
+    
 }
 
 #pragma mark - Crear datos de edad y peso
@@ -70,7 +95,8 @@ float const PESO_INICIAL = 690;
         [listadoEdad addObject:[NSNumber numberWithInt:i]];
     
     [pickerEdad selectRow:EDAD_INICIAL inComponent:0 animated:YES];
-    textFieldEdad.text = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:EDAD_INICIAL] intValue]];
+    edadSeleccionada = [[listadoEdad objectAtIndex:EDAD_INICIAL] intValue];
+    textFieldEdad.text = [NSString stringWithFormat:@"%i %@",edadSeleccionada,NSLocalizedString(@"años", nil)];
     
 }
 
@@ -82,7 +108,8 @@ float const PESO_INICIAL = 690;
         [listadoPeso addObject:[NSNumber numberWithFloat:i]];
     
     [pickerPeso selectRow:PESO_INICIAL inComponent:0 animated:YES];
-    textFieldPeso.text = [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:PESO_INICIAL] floatValue]];
+    pesoSeleccionado = [[listadoPeso objectAtIndex:PESO_INICIAL] floatValue];
+    textFieldPeso.text = [NSString stringWithFormat:@"%.01f %@",pesoSeleccionado,NSLocalizedString(@"kg", nil)];
     
 }
 
@@ -119,25 +146,31 @@ float const PESO_INICIAL = 690;
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     
-    if ([pickerView isEqual:pickerEdad])
-        textFieldEdad.text = [NSString stringWithFormat:@"%i",[[listadoEdad objectAtIndex:row] intValue]];
+    if ([pickerView isEqual:pickerEdad]) {
+        edadSeleccionada = [[listadoEdad objectAtIndex:row] intValue];
+        textFieldEdad.text = [NSString stringWithFormat:@"%i %@",edadSeleccionada,NSLocalizedString(@"años", nil)];
+    }
     
-    if ([pickerView isEqual:pickerPeso])
-        textFieldPeso.text = [NSString stringWithFormat:@"%.01f",[[listadoPeso objectAtIndex:row] floatValue]];
-
+    if ([pickerView isEqual:pickerPeso]) {
+        pesoSeleccionado = [[listadoPeso objectAtIndex:row] floatValue];
+        textFieldPeso.text = [NSString stringWithFormat:@"%.01f %@",pesoSeleccionado,NSLocalizedString(@"kg", nil)];
+    }
+    
+    [self calculoCockcroftGault];
+    
 }
 
 #pragma mark - Seleccionar género
 
 - (IBAction)pulsarSegmentGenero:(id)sender {
 
-    if (segmentGenero.selectedSegmentIndex == 0) {
-        NSLog(@"Hombre");
-    }
+    if (segmentGenero.selectedSegmentIndex == 0)
+        generoSeleccionado = 0;
     
-    if(segmentGenero.selectedSegmentIndex == 1) {
-        NSLog(@"Mujer");
-    }
+    if(segmentGenero.selectedSegmentIndex == 1)
+        generoSeleccionado = 1;
+    
+    [self calculoCockcroftGault];
     
 }
 
