@@ -13,9 +13,12 @@
 		820382852090B3F400F04066 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 820382842090B3F400F04066 /* main.m */; };
 		820382902090B75C00F04066 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8203828D2090B75C00F04066 /* AppDelegate.m */; };
 		820382912090B75C00F04066 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8203828F2090B75C00F04066 /* ViewController.m */; };
+		92E32BA331034699F2CB8B7C /* libPods-Filtrado glomerular.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DF63E90570376D952EE75B /* libPods-Filtrado glomerular.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		068923C3A3AA055324272EE4 /* Pods-Filtrado glomerular.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filtrado glomerular.release.xcconfig"; path = "Pods/Target Support Files/Pods-Filtrado glomerular/Pods-Filtrado glomerular.release.xcconfig"; sourceTree = "<group>"; };
+		55DF63E90570376D952EE75B /* libPods-Filtrado glomerular.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Filtrado glomerular.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		820382722090B3F400F04066 /* Filtrado glomerular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filtrado glomerular.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8203827C2090B3F400F04066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8203827E2090B3F400F04066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		8203828D2090B75C00F04066 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8203828E2090B75C00F04066 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8203828F2090B75C00F04066 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F26FE64AF85A28EC8D9BD30F /* Pods-Filtrado glomerular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filtrado glomerular.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filtrado glomerular/Pods-Filtrado glomerular.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E32BA331034699F2CB8B7C /* libPods-Filtrado glomerular.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				820382742090B3F400F04066 /* Filtrado glomerular */,
 				820382732090B3F400F04066 /* Products */,
+				CF35216288A6DA678AC91952 /* Pods */,
+				D829A4805B08AB00C2728FA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +94,23 @@
 			path = Vista;
 			sourceTree = "<group>";
 		};
+		CF35216288A6DA678AC91952 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F26FE64AF85A28EC8D9BD30F /* Pods-Filtrado glomerular.debug.xcconfig */,
+				068923C3A3AA055324272EE4 /* Pods-Filtrado glomerular.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D829A4805B08AB00C2728FA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55DF63E90570376D952EE75B /* libPods-Filtrado glomerular.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 820382882090B3F400F04066 /* Build configuration list for PBXNativeTarget "Filtrado glomerular" */;
 			buildPhases = (
+				630F7B6C619176BCE5FF34C5 /* [CP] Check Pods Manifest.lock */,
 				8203826E2090B3F400F04066 /* Sources */,
 				8203826F2090B3F400F04066 /* Frameworks */,
 				820382702090B3F400F04066 /* Resources */,
+				039B5D3CC3AACDF4924E4DE9 /* [CP] Embed Pods Frameworks */,
+				6CABBE420F8908FAFE5BAC00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +179,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		039B5D3CC3AACDF4924E4DE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Filtrado glomerular/Pods-Filtrado glomerular-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		630F7B6C619176BCE5FF34C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Filtrado glomerular-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CABBE420F8908FAFE5BAC00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Filtrado glomerular/Pods-Filtrado glomerular-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8203826E2090B3F400F04066 /* Sources */ = {
@@ -292,6 +370,7 @@
 		};
 		820382892090B3F400F04066 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F26FE64AF85A28EC8D9BD30F /* Pods-Filtrado glomerular.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +385,7 @@
 		};
 		8203828A2090B3F400F04066 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 068923C3A3AA055324272EE4 /* Pods-Filtrado glomerular.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
