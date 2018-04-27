@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FC4C28B690683D70A6C3C1D8E9094660"
+               BlueprintIdentifier = "F82C969C6885BDDC6DB5CE85127C0731"
                BlueprintName = "Pods-Filtrado glomerular"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-Filtrado glomerular.a">
