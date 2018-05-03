@@ -227,7 +227,7 @@ float const PESO_INICIAL = 690;
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     NSLog(@"textFieldShouldBeginEditing");
-    textField.backgroundColor = [UIColor colorWithRed:220.0f/255.0f green:220.0f/255.0f blue:220.0f/255.0f alpha:1.0f];
+    //textField.backgroundColor = [UIColor colorWithRed:220.0f/255.0f green:220.0f/255.0f blue:220.0f/255.0f alpha:1.0f];
     return YES;
 }
 
@@ -237,7 +237,8 @@ float const PESO_INICIAL = 690;
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
     NSLog(@"textFieldShouldEndEditing");
-    textField.backgroundColor = [UIColor whiteColor];
+    [self calculoCockcroftGault];
+    //textField.backgroundColor = [UIColor whiteColor];
     return YES;
 }
 
@@ -253,18 +254,13 @@ float const PESO_INICIAL = 690;
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     NSLog(@"textFieldShouldReturn:");
-    if (textField.tag == 1) {
-        UITextField *passwordTextField = (UITextField *)[self.view viewWithTag:2];
-        [passwordTextField becomeFirstResponder];
-    }
-    else {
-        [textField resignFirstResponder];
-    }
+    [textField resignFirstResponder];
     return YES;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSLog(@"textField:shouldChangeCharactersInRange:replacementString:");
+    [self calculoCockcroftGault];
     if ([string isEqualToString:@"#"]) {
         return NO;
     }

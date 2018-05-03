@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Filtrado glomerular/Controlador/ViewController.m"
-            timestampString = "547047470.7963049"
+            timestampString = "547047877.824038"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Filtrado glomerular/Controlador/ViewController.m"
-            timestampString = "547047470.796599"
+            timestampString = "547047877.8246059"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "330"
-            endingLineNumber = "330"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
             landmarkName = "-mostrarConfiguracion"
             landmarkType = "7">
          </BreakpointContent>
