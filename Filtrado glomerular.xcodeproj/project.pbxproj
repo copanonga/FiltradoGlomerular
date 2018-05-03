@@ -13,6 +13,8 @@
 		820382852090B3F400F04066 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 820382842090B3F400F04066 /* main.m */; };
 		820382902090B75C00F04066 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8203828D2090B75C00F04066 /* AppDelegate.m */; };
 		820382912090B75C00F04066 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8203828F2090B75C00F04066 /* ViewController.m */; };
+		82893BE2209B07BD003FF978 /* ico_arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 82893BE0209B07BD003FF978 /* ico_arrow_down.png */; };
+		82893BE3209B07BE003FF978 /* ico_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 82893BE1209B07BD003FF978 /* ico_settings.png */; };
 		92E32BA331034699F2CB8B7C /* libPods-Filtrado glomerular.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DF63E90570376D952EE75B /* libPods-Filtrado glomerular.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		8203828D2090B75C00F04066 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8203828E2090B75C00F04066 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8203828F2090B75C00F04066 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		82893BE0209B07BD003FF978 /* ico_arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_arrow_down.png; sourceTree = "<group>"; };
+		82893BE1209B07BD003FF978 /* ico_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_settings.png; sourceTree = "<group>"; };
 		F26FE64AF85A28EC8D9BD30F /* Pods-Filtrado glomerular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filtrado glomerular.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filtrado glomerular/Pods-Filtrado glomerular.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +69,7 @@
 		820382742090B3F400F04066 /* Filtrado glomerular */ = {
 			isa = PBXGroup;
 			children = (
+				82893BDF209B07BD003FF978 /* Resources */,
 				820382922090B76700F04066 /* Vista */,
 				8203828B2090B75C00F04066 /* Controlador */,
 				820382832090B3F400F04066 /* Info.plist */,
@@ -92,6 +97,15 @@
 				820382802090B3F400F04066 /* LaunchScreen.storyboard */,
 			);
 			path = Vista;
+			sourceTree = "<group>";
+		};
+		82893BDF209B07BD003FF978 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82893BE0209B07BD003FF978 /* ico_arrow_down.png */,
+				82893BE1209B07BD003FF978 /* ico_settings.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CF35216288A6DA678AC91952 /* Pods */ = {
@@ -173,7 +187,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				820382822090B3F400F04066 /* LaunchScreen.storyboard in Resources */,
+				82893BE2209B07BD003FF978 /* ico_arrow_down.png in Resources */,
 				8203827F2090B3F400F04066 /* Assets.xcassets in Resources */,
+				82893BE3209B07BE003FF978 /* ico_settings.png in Resources */,
 				8203827D2090B3F400F04066 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
