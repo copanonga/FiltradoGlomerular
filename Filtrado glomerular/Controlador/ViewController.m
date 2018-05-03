@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFieldEdad;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPeso;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldCreatinina;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldCockcroftGault;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerEdad;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerPeso;
@@ -31,7 +32,7 @@
 @end
 
 @implementation ViewController
-@synthesize textFieldEdad, textFieldPeso, textFieldCreatinina;
+@synthesize textFieldEdad, textFieldPeso, textFieldCreatinina, textFieldCockcroftGault;
 @synthesize pickerEdad, pickerPeso;
 @synthesize segmentGenero;
 
@@ -91,6 +92,8 @@ float const PESO_INICIAL = 690;
     
     float resultado = (((140 - edadSeleccionada) * pesoSeleccionado) / (72 * creatininaSeleccionada)) * factor_sexo;
     NSLog(@"Resultado: %f", resultado);
+    
+    textFieldCockcroftGault.text = [NSString stringWithFormat:@"%.03f ml/min", resultado];
     
 }
 
@@ -205,6 +208,7 @@ float const PESO_INICIAL = 690;
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     NSLog(@"textFieldDidEndEditing");
+    [self calculoCockcroftGault];
 }
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField{

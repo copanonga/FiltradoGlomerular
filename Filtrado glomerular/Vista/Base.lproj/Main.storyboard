@@ -84,7 +84,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="fbU-Pl-2On"/>
                                         </connections>
@@ -94,7 +94,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="9LW-M0-baV"/>
                                         </connections>
@@ -149,6 +149,7 @@
                         <outlet property="pickerEdad" destination="NKU-uR-udv" id="Wuz-5t-Gl8"/>
                         <outlet property="pickerPeso" destination="1Kv-Ya-GfG" id="TnN-IL-GXw"/>
                         <outlet property="segmentGenero" destination="cY6-zE-ekl" id="muj-XX-LIb"/>
+                        <outlet property="textFieldCockcroftGault" destination="jwP-lJ-eJY" id="Bgt-wM-8i3"/>
                         <outlet property="textFieldCreatinina" destination="ULl-Es-Dey" id="1Sy-Am-6JB"/>
                         <outlet property="textFieldEdad" destination="1v8-Zs-67X" id="ui0-0O-PW3"/>
                         <outlet property="textFieldPeso" destination="rnt-Jk-SM2" id="jJG-Cw-wAi"/>
