@@ -191,6 +191,15 @@ float const PESO_INICIAL = 690;
     
 }
 
+#pragma mark - Botones
+
+- (IBAction)botonConfiguracion:(id)sender {
+
+    NSLog(@"Configuración");
+    [self mostrarConfiguracion];
+
+}
+
 #pragma mark - Textos
 
 //https://code.tutsplus.com/tutorials/ios-sdk-uitextfield-uitextfielddelegate--mobile-10943
@@ -247,6 +256,68 @@ float const PESO_INICIAL = 690;
     NSLog(@"touchesBegan:withEvent:");
     [self.view endEditing:YES];
     [super touchesBegan:touches withEvent:event];
+}
+
+#pragma mark - Utilidades
+
+-(void) compartirTexto: (NSString *) textoAEnviar {
+    
+    UIActivityViewController *activityViewController =
+    [[UIActivityViewController alloc] initWithActivityItems:@[textoAEnviar]
+                                      applicationActivities:nil];
+    [self.navigationController presentViewController:activityViewController
+                                            animated:YES
+                                          completion:^{
+                                              
+                                          }];
+    
+}
+
+-(void)mostrarConfiguracion {
+    
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:NSLocalizedString(@"Configuración", nil)
+                                          message:nil
+                                          preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *cancelar = [UIAlertAction
+                               actionWithTitle:NSLocalizedString(@"Cancelar", nil)
+                               style:UIAlertActionStyleCancel
+                               handler:^(UIAlertAction *action)
+                               {
+                                   NSLog(@"Cancel action");
+                               }];
+    
+    UIAlertAction *idioma = [UIAlertAction
+                             actionWithTitle:NSLocalizedString(@"Idioma", nil)
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction *action)
+                             {
+                                 
+                             }];
+    
+    UIAlertAction *compartir = [UIAlertAction
+                             actionWithTitle:NSLocalizedString(@"Compartir", nil)
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction *action)
+                             {
+                                 
+                                 NSMutableString *textoACompartir = [[NSMutableString alloc] init];
+                                 //[textoACompartir appendString:NSLocalizedString(@"CFBundleDisplayName", nil)];
+                                 [textoACompartir appendString:@"Filtrado glomerular"];
+                                 [textoACompartir appendString:@" - "];
+                                 [textoACompartir appendString:@"https://itunes.apple.com/app/"];
+                                 [self compartirTexto:textoACompartir];
+                                 
+                             }];
+    
+    
+    [alertController addAction:cancelar];
+    [alertController addAction:idioma];
+    [alertController addAction:compartir];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
 }
 
 @end
