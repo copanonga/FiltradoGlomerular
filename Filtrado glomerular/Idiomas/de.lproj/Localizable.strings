@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  Filtrado glomerular
+
+  Created by Jose on 6/1/17.
+  Copyright © 2017 Copanonga. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Glomeruläre Filtrationsrate";
+
+"Configuración" = "Konfiguration";
+"Compartir" = "Aktie";
+"Idioma" = "Sprache";
+"Cambiar a" = "Ändern";
+"Cancelar" = "Abbrechen";
+"Es necesario reiniciar la aplicación" = "Es ist notwendig, die Anwendung neu zu starten";
+"Ok" = "Ok";
+
+"años" = "jahren";
+"kg" = "kg";
+
+"Edad" = "Alter";
+"Peso" = "Gewicht";
+"Creatinina en plasma" = "Serum-Kreatinin";
+"Cockcroft-Gault" = "Cockcroft-Gault";
+
+"Hombre" = "Männer";
+"Mujer" = "Frauen";

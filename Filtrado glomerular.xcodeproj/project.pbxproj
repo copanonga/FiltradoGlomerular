@@ -39,6 +39,8 @@
 		82893BE8209B0E22003FF978 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		82893BE9209B0E22003FF978 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82893BEA209B0E22003FF978 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		82893BF4209B4701003FF978 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		82893BF5209B470A003FF978 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F26FE64AF85A28EC8D9BD30F /* Pods-Filtrado glomerular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filtrado glomerular.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filtrado glomerular/Pods-Filtrado glomerular.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 				en,
 				Base,
 				es,
+				de,
 			);
 			mainGroup = 820382692090B3F400F04066;
 			productRefGroup = 820382732090B3F400F04066 /* Products */;
@@ -304,6 +307,7 @@
 			children = (
 				82893BE6209B0E22003FF978 /* en */,
 				82893BE9209B0E22003FF978 /* es */,
+				82893BF4209B4701003FF978 /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -313,6 +317,7 @@
 			children = (
 				82893BE8209B0E22003FF978 /* en */,
 				82893BEA209B0E22003FF978 /* es */,
+				82893BF5209B470A003FF978 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
