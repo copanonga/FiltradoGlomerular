@@ -8,9 +8,21 @@
 
 "CFBundleDisplayName" = "Renal function";
 
+"Configuración" = "Settings";
 "Compartir" = "Share";
 "Idioma" = "Language";
 "Cambiar a" = "Change to";
 "Cancelar" = "Cancel";
 "Es necesario reiniciar la aplicación" = "You must restart the app";
 "Ok" = "Ok";
+
+"años" = "years";
+"kg" = "kg";
+
+"Edad" = "Age";
+"Peso" = "Weight";
+"Creatinina en plasma" = "Serum creatinine";
+"Cockcroft-Gault" = "Cockcroft-Gault";
+
+"Hombre" = "Man";
+"Mujer" = "Woman";

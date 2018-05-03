@@ -8,9 +8,21 @@
 
 "CFBundleDisplayName" = "Filtrado glomerular";
 
+"Configuración" = "Configuración";
 "Compartir" = "Compartir";
 "Idioma" = "Idioma";
 "Cambiar a" = "Cambiar a";
 "Cancelar" = "Cancelar";
 "Es necesario reiniciar la aplicación" = "Es necesario reiniciar la aplicación";
 "Ok" = "Ok";
+
+"años" = "años";
+"kg" = "kg";
+
+"Edad" = "Edad";
+"Peso" = "Peso";
+"Creatinina en plasma" = "Creatinina en plasma";
+"Cockcroft-Gault" = "Cockcroft-Gault";
+
+"Hombre" = "Hombre";
+"Mujer" = "Mujer";

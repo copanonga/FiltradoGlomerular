@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Filtrado glomerular/Controlador/ViewController.m"
-            timestampString = "547032650.62462"
+            timestampString = "547046959.240538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-calculoCockcroftGault"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Filtrado glomerular/Controlador/ViewController.m"
-            timestampString = "547032650.625151"
+            timestampString = "547046959.240721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
             landmarkName = "-mostrarConfiguracion"
             landmarkType = "7">
          </BreakpointContent>

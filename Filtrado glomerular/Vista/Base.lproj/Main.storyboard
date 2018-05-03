@@ -157,6 +157,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="labelCockcroftGault" destination="9lg-fv-f8h" id="HpN-ku-Qjl"/>
+                        <outlet property="labelCreatininaEnPlasma" destination="kU0-hg-Pgf" id="TbY-gQ-hz3"/>
+                        <outlet property="labelEdad" destination="0K6-kC-ftZ" id="N2e-75-CtP"/>
+                        <outlet property="labelFiltradoGlomerular" destination="Rxp-HG-uVY" id="Z0A-Qy-FXo"/>
+                        <outlet property="labelPeso" destination="3H2-on-8Fp" id="POS-wB-h7C"/>
                         <outlet property="pickerEdad" destination="NKU-uR-udv" id="Wuz-5t-Gl8"/>
                         <outlet property="pickerPeso" destination="1Kv-Ya-GfG" id="TnN-IL-GXw"/>
                         <outlet property="segmentGenero" destination="cY6-zE-ekl" id="muj-XX-LIb"/>

@@ -29,12 +29,19 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerPeso;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentGenero;
 
+@property (weak, nonatomic) IBOutlet UILabel *labelFiltradoGlomerular;
+@property (weak, nonatomic) IBOutlet UILabel *labelEdad;
+@property (weak, nonatomic) IBOutlet UILabel *labelPeso;
+@property (weak, nonatomic) IBOutlet UILabel *labelCreatininaEnPlasma;
+@property (weak, nonatomic) IBOutlet UILabel *labelCockcroftGault;
+
 @end
 
 @implementation ViewController
 @synthesize textFieldEdad, textFieldPeso, textFieldCreatinina, textFieldCockcroftGault;
 @synthesize pickerEdad, pickerPeso;
 @synthesize segmentGenero;
+@synthesize labelFiltradoGlomerular, labelEdad, labelPeso, labelCreatininaEnPlasma, labelCockcroftGault;
 
 int const EDAD_MAXIMA = 121;
 int const PESO_MAXIMO = 151;
@@ -46,6 +53,7 @@ float const PESO_INICIAL = 690;
     
     NSLog(@"\nViewController");
     
+    [self inicializarTextos];
     [self inicializar];
     
     [super viewDidLoad];
@@ -65,6 +73,19 @@ float const PESO_INICIAL = 690;
     creatininaSeleccionada = 0;
     generoSeleccionado = 0;
     
+}
+
+-(void)inicializarTextos {
+    
+    labelFiltradoGlomerular.text = NSLocalizedString(@"CFBundleDisplayName", nil);
+    labelEdad.text = NSLocalizedString(@"Edad", nil);
+    labelPeso.text = NSLocalizedString(@"Peso", nil);
+    labelCreatininaEnPlasma.text = NSLocalizedString(@"Creatinina en plasma", nil);
+    labelCockcroftGault.text = NSLocalizedString(@"Cockcroft-Gault", nil);
+    
+    [segmentGenero setTitle:NSLocalizedString(@"Hombre", nil) forSegmentAtIndex:0];
+    [segmentGenero setTitle:NSLocalizedString(@"Mujer", nil) forSegmentAtIndex:1];
+
 }
 
 - (void)didReceiveMemoryWarning {
