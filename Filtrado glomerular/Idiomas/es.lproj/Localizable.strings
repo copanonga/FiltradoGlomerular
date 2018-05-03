@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Filtrado glomerular
+
+  Created by Jose on 6/1/17.
+  Copyright © 2017 Copanonga. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Filtrado glomerular";
+
+"Compartir" = "Compartir";
+"Idioma" = "Idioma";
+"Cambiar a" = "Cambiar a";
+"Cancelar" = "Cancelar";
+"Es necesario reiniciar la aplicación" = "Es necesario reiniciar la aplicación";
+"Ok" = "Ok";

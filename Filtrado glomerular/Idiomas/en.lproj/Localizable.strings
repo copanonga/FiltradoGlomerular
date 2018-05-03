@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Filtrado glomerular
+
+  Created by Jose on 6/1/17.
+  Copyright © 2017 Copanonga. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Renal function";
+
+"Compartir" = "Share";
+"Idioma" = "Language";
+"Cambiar a" = "Change to";
+"Cancelar" = "Cancel";
+"Es necesario reiniciar la aplicación" = "You must restart the app";
+"Ok" = "Ok";

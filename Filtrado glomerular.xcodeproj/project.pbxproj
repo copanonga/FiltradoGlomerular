@@ -15,6 +15,8 @@
 		820382912090B75C00F04066 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8203828F2090B75C00F04066 /* ViewController.m */; };
 		82893BE2209B07BD003FF978 /* ico_arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 82893BE0209B07BD003FF978 /* ico_arrow_down.png */; };
 		82893BE3209B07BE003FF978 /* ico_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 82893BE1209B07BD003FF978 /* ico_settings.png */; };
+		82893BEB209B0E22003FF978 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82893BE5209B0E22003FF978 /* InfoPlist.strings */; };
+		82893BEC209B0E22003FF978 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82893BE7209B0E22003FF978 /* Localizable.strings */; };
 		92E32BA331034699F2CB8B7C /* libPods-Filtrado glomerular.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DF63E90570376D952EE75B /* libPods-Filtrado glomerular.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,10 @@
 		8203828F2090B75C00F04066 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82893BE0209B07BD003FF978 /* ico_arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_arrow_down.png; sourceTree = "<group>"; };
 		82893BE1209B07BD003FF978 /* ico_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_settings.png; sourceTree = "<group>"; };
+		82893BE6209B0E22003FF978 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		82893BE8209B0E22003FF978 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		82893BE9209B0E22003FF978 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		82893BEA209B0E22003FF978 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F26FE64AF85A28EC8D9BD30F /* Pods-Filtrado glomerular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filtrado glomerular.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filtrado glomerular/Pods-Filtrado glomerular.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +75,7 @@
 		820382742090B3F400F04066 /* Filtrado glomerular */ = {
 			isa = PBXGroup;
 			children = (
+				82893BE4209B0E22003FF978 /* Idiomas */,
 				82893BDF209B07BD003FF978 /* Resources */,
 				820382922090B76700F04066 /* Vista */,
 				8203828B2090B75C00F04066 /* Controlador */,
@@ -106,6 +113,15 @@
 				82893BE1209B07BD003FF978 /* ico_settings.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		82893BE4209B0E22003FF978 /* Idiomas */ = {
+			isa = PBXGroup;
+			children = (
+				82893BE5209B0E22003FF978 /* InfoPlist.strings */,
+				82893BE7209B0E22003FF978 /* Localizable.strings */,
+			);
+			path = Idiomas;
 			sourceTree = "<group>";
 		};
 		CF35216288A6DA678AC91952 /* Pods */ = {
@@ -170,6 +186,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 820382692090B3F400F04066;
 			productRefGroup = 820382732090B3F400F04066 /* Products */;
@@ -187,7 +204,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				820382822090B3F400F04066 /* LaunchScreen.storyboard in Resources */,
+				82893BEB209B0E22003FF978 /* InfoPlist.strings in Resources */,
 				82893BE2209B07BD003FF978 /* ico_arrow_down.png in Resources */,
+				82893BEC209B0E22003FF978 /* Localizable.strings in Resources */,
 				8203827F2090B3F400F04066 /* Assets.xcassets in Resources */,
 				82893BE3209B07BE003FF978 /* ico_settings.png in Resources */,
 				8203827D2090B3F400F04066 /* Main.storyboard in Resources */,
@@ -278,6 +297,24 @@
 				820382812090B3F400F04066 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		82893BE5209B0E22003FF978 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82893BE6209B0E22003FF978 /* en */,
+				82893BE9209B0E22003FF978 /* es */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		82893BE7209B0E22003FF978 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82893BE8209B0E22003FF978 /* en */,
+				82893BEA209B0E22003FF978 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

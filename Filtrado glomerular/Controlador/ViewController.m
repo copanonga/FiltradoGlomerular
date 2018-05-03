@@ -303,8 +303,7 @@ float const PESO_INICIAL = 690;
                              {
                                  
                                  NSMutableString *textoACompartir = [[NSMutableString alloc] init];
-                                 //[textoACompartir appendString:NSLocalizedString(@"CFBundleDisplayName", nil)];
-                                 [textoACompartir appendString:@"Filtrado glomerular"];
+                                 [textoACompartir appendString:NSLocalizedString(@"CFBundleDisplayName", nil)];
                                  [textoACompartir appendString:@" - "];
                                  [textoACompartir appendString:@"https://itunes.apple.com/app/"];
                                  [self compartirTexto:textoACompartir];
