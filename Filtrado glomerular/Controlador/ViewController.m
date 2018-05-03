@@ -80,6 +80,11 @@ float const PESO_INICIAL = 690;
     NSLog(@"Peso: %.01f", pesoSeleccionado);
     NSLog(@"Creatinina: %.03f", creatininaSeleccionada);
     
+    if (creatininaSeleccionada==0){
+        textFieldCockcroftGault.text = [NSString stringWithFormat:@""];
+        return;
+    }
+    
     float factor_sexo = 0;
     
     if (generoSeleccionado) {
