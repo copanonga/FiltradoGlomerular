@@ -74,14 +74,23 @@ float const PESO_INICIAL = 690;
 
 -(void)calculoCockcroftGault {
     
+    creatininaSeleccionada = [textFieldCreatinina.text floatValue];
     NSLog(@"Edad: %i", edadSeleccionada);
     NSLog(@"Peso: %.01f", pesoSeleccionado);
     NSLog(@"Creatinina: %.03f", creatininaSeleccionada);
     
-    if (generoSeleccionado)
+    float factor_sexo = 0;
+    
+    if (generoSeleccionado) {
         NSLog(@"Género: mujer");
-    else
+        factor_sexo = 0.85;
+    } else {
         NSLog(@"Género: hombre");
+        factor_sexo = 1;
+    }
+    
+    float resultado = (((140 - edadSeleccionada) * pesoSeleccionado) / (72 * creatininaSeleccionada)) * factor_sexo;
+    NSLog(@"Resultado: %f", resultado);
     
 }
 
